@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>WpfApp1</AssemblyName>
+    <RootNamespace>WpfApp1</RootNamespace>
+    <ApplicationIcon>notes-ico.ico</ApplicationIcon>
+    <SignAssembly>false</SignAssembly>
+    <Win32Resource />
+    <PackageId>knock-notes</PackageId>
+    <Authors>bohorquez-dev</Authors>
+    <Product>knock-notes</Product>
+    <Description>version de escritorio de knock-notes de la web</Description>
+    <Company>knock-back software</Company>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="notas-adhesivas.png" />
+    <None Remove="notes-png.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="2.13.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="notas-adhesivas.png" />
+    <Resource Include="notes-png.png" />
+  </ItemGroup>
+
+</Project>
